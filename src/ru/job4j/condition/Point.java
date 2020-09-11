@@ -8,7 +8,7 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(3, 7, 14, 5);
-        System.out.println("result (3, 7) to (14, 5) " + result);
+        double result = Point.distance(3, 7, 9, 5);
+        System.out.println("result (3, 7) to (9, 5) " + result);
     }
 }
