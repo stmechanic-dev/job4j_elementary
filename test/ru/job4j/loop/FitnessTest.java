@@ -6,7 +6,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class FitnessTest {
-
     @Test
     public void whenIvanGreatNik() {
         int month = Fitness.calc(95, 90);
@@ -30,5 +29,4 @@ public class FitnessTest {
         int month = Fitness.calc(90, 90);
         assertThat(month, is(1));
     }
-
 }
