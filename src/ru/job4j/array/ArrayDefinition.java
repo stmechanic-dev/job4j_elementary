@@ -8,5 +8,15 @@ public class ArrayDefinition {
         System.out.println("Размер массива surnames равен: " + surnames.length);
         float[] prices = new float[40];
         System.out.println("Размер массива prices равен: " + prices.length);
+
+        String[] names = new String[4];
+        names[0] = "Ivan Ivanov";
+        names[1] = "Petr Petrov";
+        names[2] = "Sidr Sidorov";
+        names[3] = "Vasilek Vasiliev";
+
+        for (String s : names) {
+            System.out.println(s);
+        }
     }
 }
