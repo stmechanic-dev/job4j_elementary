@@ -9,17 +9,17 @@ public class Merge {
         } else if (right.length == 0) {
             rsl = left;
         } else {
-            for (int i = 0; i < left.length; ) {
-                for (int j = 0; j < right.length; ) {
-                    if (i < left.length && left[i] <= right[j]) {
-                        rsl[size] = left[i];
-                        size++;
-                        i++;
-                    } else {
-                        rsl[size] = right[j];
-                        size++;
-                        j++;
-                    }
+            int leftCount = 0;
+            int rightCount = 0;
+            while (size < rsl.length) {
+                if (leftCount < left.length && left[leftCount] <= right[rightCount]) {
+                    rsl[size] = left[leftCount];
+                    size++;
+                    leftCount++;
+                } else {
+                    rsl[size] = right[rightCount];
+                    size++;
+                    rightCount++;
                 }
             }
         }
