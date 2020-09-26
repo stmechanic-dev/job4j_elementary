@@ -18,16 +18,12 @@ public class Matches {
             System.out.println(playerName);
             System.out.println("Сколько спичек вы возьмете?");
             int count = Integer.valueOf(input.nextLine());
-            while (true) {
-                if (count >= 1 && count <= 3) {
-                    mCount -= count;
-                    break;
-                } else {
-                    System.out.println("Вы ввели некорректное числою." + System.lineSeparator()
-                                        + "Попробуйте ещё раз.");
-                    count = Integer.valueOf(input.nextLine());
-                }
+            while (count < 1 && count > 3) {
+                System.out.println("Вы ввели некорректное числою." + System.lineSeparator()
+                        + "Попробуйте ещё раз.");
+                count = Integer.valueOf(input.nextLine());
             }
+            mCount -= count;
             System.out.println("Осталось " + mCount + " спич(ек)/(ка) на столе.");
             if (mCount <= 0) {
                 System.out.println(playerName + " ВЫ ПОБЕДИЛИ!!!");
