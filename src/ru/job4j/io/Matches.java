@@ -14,11 +14,7 @@ public class Matches {
                 + "заберёт последние спички.");
         boolean check = mCount > 0;
         while (check) {
-            if (player == 1) {
-                playerName = "1-ый игрок";
-            } else {
-                playerName = "2-ой игрок";
-            }
+            playerName = player == 1 ? "1-ый игрок" : "2-ой игрок";
             System.out.println(playerName);
             System.out.println("Сколько спичек вы возьмете?");
             int count = Integer.valueOf(input.nextLine());
@@ -37,11 +33,7 @@ public class Matches {
                 System.out.println(playerName + " ВЫ ПОБЕДИЛИ!!!");
                 break;
             }
-            if (player == 1) {
-                player = 2;
-            } else {
-                player = 1;
-            }
+            player = player == 1 ? 2 : 1;
         }
     }
 }
